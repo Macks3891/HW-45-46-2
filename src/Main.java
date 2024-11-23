@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+/**
+ * Класс Main для создания и сортировки списка объектов Car.
+ */
+public class Main {
+    /**
+     * Точка входа в программу.
+     *
+     * @param args Аргументы командной строки.
+     */
+    public static void main(String[] args) {
+        List<Car> cars = new ArrayList<>();
+        cars.add(new Car("Lada", 2024, "Black"));
+        cars.add(new Car("Lada", 2024, "White"));
+        cars.add(new Car("Lada", 2024, "Red"));
+        cars.add(new Car("Lada", 2023, "Gray"));
+        cars.add(new Car("Volga", 2024, "Black"));
+        cars.add(new Car("Volga", 2023, "White"));
+        cars.add(new Car("Volga", 2022, "Red"));
+        cars.add(new Car("Audi", 2020, "Red"));
+
+
+        Collections.sort(cars);
+
+
+        for (Car car : cars) {
+            System.out.println(car);
         }
     }
 }
